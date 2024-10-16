@@ -82,21 +82,29 @@ int main(){
             printf("\nPlayer 2 menyerang  (Y/N) : ");
             scanf(" %c",&attack2);
             if (attack2 == 'Y'){
-                printf("1. Basic ATK\n2. True Damage\n3. Heal\n");
+                printf("1. Basic ATK\n2. True Damage\n3. Lifesteal\n4. Heal\n");
                 scanf("%d",&PilihATK2);
-                if(PilihATK2 == 1){
+                if(PilihATK2 == 1){// BASIC ATTACK
                     player1_hp = player1_hp - player2_atk;
                     printf("Sisa HP player 1 : %d\n",player1_hp);
                 }
-                 else if (PilihATK2 == 2){
+                else if (PilihATK2 == 2){// ULTIMATE
                     int random_ATK2 = rand() % 6 + 15;
                     player2_hp = player2_hp -random_ATK2;
                     player1_hp = player1_hp - 15;
                     printf("\nSisa HP player 1 : %d\n",player1_hp);
                     printf("\nSisa HP player 2 : %d\n",player2_hp);
-    
                 }
-               else {
+                else if(PilihATK2 == 3){// LIFESTEAL
+                    srand(time(0));
+                    int randomls = (rand() % 6) + 5;
+                    int ls = player1_hp * randomls/100;
+                    player1_hp = player1_hp - ls;
+                    player2_hp = player2_hp + ls;
+                    printf("\nSisa HP player 1 : %d\n",player1_hp);
+                    printf("\nSisa HP player 2 : %d\n",player2_hp);
+                }
+               else {//HEAL
                     srand(time(0));
                     int random_heal1 = (rand() % 4) + 3;
                     player2_hp = player2_hp + random_heal1;
@@ -113,21 +121,29 @@ int main(){
             printf("\nPlayer 1 menyerang  (Y/N) : ");
             scanf(" %c",&attack1);
             if (attack1 == 'Y'){
-                printf("1. Basic ATK\n2. True Damage\n3. Heal\n");
+                printf("1. Basic ATK\n2. True Damage\n3. Lifesteal\n4. Heal\n");
                 scanf("%d",&PilihATK1);
-                if (PilihATK1 == 1){
+                if (PilihATK1 == 1){//BASIC ATTACK
                     player2_hp = player2_hp - player1_atk;
                     printf("\nSisa HP player 2 : %d\n",player2_hp);
                 }
-                 else if (PilihATK1 == 2){
+                 else if (PilihATK1 == 2){// ULTIMATE
                     int random_ATK1 = rand() % 6 + 15;
                     player2_hp = player2_hp -random_ATK1;
                     player1_hp = player1_hp - 15;
                     printf("\nSisa HP player 2 : %d\n",player2_hp);
                     printf("\nSisa HP player 1 : %d\n",player1_hp);
-    
                 }
-               else {
+                 else if (PilihATK1 == 3){//LIFESTEl
+                    srand(time(0));
+                    int randomls = (rand() % 6) + 5;
+                    int ls = player2_hp * randomls/100;
+                    player2_hp = player2_hp - ls;
+                    player1_hp = player1_hp + ls;
+                    printf("\nSisa HP player 2 : %d\n",player2_hp);
+                    printf("\nSisa HP player 1 : %d\n",player1_hp);
+                }
+               else {//HEAL
                     srand(time(0));
                     int random_heal2 = (rand() % 4) + 3;
                     player1_hp = player1_hp + random_heal2;
@@ -149,22 +165,29 @@ int main(){
             printf("\nPlayer 1 menyerang  (Y/N) : ");
             scanf(" %c",&attack3);
             if(attack3 == 'Y'){
-                printf("1. Basic ATK\n2. True Damage\n3. Heal\n");
+                printf("1. Basic ATK\n2. True Damage\n3. Lifesteal\n4. Heal\n");
                 scanf("%d",&PilihATK1);
-                if (PilihATK1 == 1){
+                if (PilihATK1 == 1){//BASIC ATTACK
                     player2_hp = player2_hp - player1_atk;
                     printf("\nSisa HP player 2 : %d\n",player2_hp);
                 }
-                else if (PilihATK1 == 2){
+                else if (PilihATK1 == 2){//ULTIMATE
                     int random_ATK1 = rand() % 6 + 15;
                     player2_hp = player2_hp -random_ATK1;
                     player1_hp = player1_hp - 15;
                     printf("\nSisa HP player 2 : %d\n",player2_hp);
                     printf("\nSisa HP player 1 : %d\n",player1_hp);
-                    
-    
                 }
-                else {
+                else if (PilihATK1 == 3){//LIFESTEAL
+                   srand(time(0));
+                    int randomls = (rand() % 6) + 5;
+                    int ls = player2_hp * randomls/100;
+                    player2_hp = player2_hp - ls;
+                    player1_hp = player1_hp + ls;
+                    printf("\nSisa HP player 2 : %d\n",player2_hp);
+                    printf("\nSisa HP player 1 : %d\n",player1_hp);
+                }
+                else {//HEAL
                     srand(time(0));
                     int random_heal3 = (rand() % 4) + 3;
                     player1_hp = player1_hp + random_heal3;
@@ -181,21 +204,29 @@ int main(){
             printf("\nPlayer 2 menyerang  (Y/N) : ");
             scanf(" %c",&attack4);
             if(attack4 == 'Y'){
-                printf("1. Basic ATK\n2. True Damage\n3. Heal\n");
+                printf("1. Basic ATK\n2. True Damage\n3. Lifesteal\n4. Heal\n");
                 scanf("%d",&PilihATK2);
-                if(PilihATK2 == 1){
+                if(PilihATK2 == 1){//BASIC ATTACK
                     player1_hp = player1_hp - player2_atk;
                     printf("Sisa HP player 1 : %d\n",player1_hp);
                 }
-                else if (PilihATK2 == 2){
+                else if (PilihATK2 == 2){//ULTIMATE
                     int random_ATK2 = rand() % 6 + 15;
                     player1_hp = player1_hp - random_ATK2;
                     player2_hp = player2_hp - 15;
                     printf("\nSisa HP player 1 : %d\n",player1_hp);
                     printf("\nSisa HP player 2 : %d\n",player2_hp);
-    
                 }
-              else {
+                else if(PilihATK2 == 3){//LIFESTEAL
+                    srand(time(0));
+                    int randomls = (rand() % 6) + 5;
+                    int ls = player1_hp * randomls/100;
+                    player1_hp = player1_hp - ls;
+                    player2_hp = player2_hp + ls;
+                    printf("\nSisa HP player 1 : %d\n",player1_hp);
+                    printf("\nSisa HP player 2 : %d\n",player2_hp);
+                }
+              else {//HEAL
                     srand(time(0));
                     int random_heal4 = (rand() % 4) + 3;
                     player2_hp = player2_hp + random_heal4;
